@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>MVIEWER</title>
+        <style>
+          @import "node_modules/ol/ol.css";
+        </style>
+        <style>
+          html, body {
+            margin: 0;
+            height: 100%;
+          }
+          #map {
+            position: fixed;
+            height:100%;
+            width: 100%;
+        }
+        </style>
+    </head>
+    <body>
+      <mviewer id="mviewer">
+        <mviewer-sidebar></mviewer-sidebar>
+        <mviewer-navbar></mviewer-navbar>
+        <mviewer-component></mviewer-component>
+        <div id="map"></div>
+        <script type ="module" src="./modules/components.js"></script>
+        <script src="./index.js"></script>
+      </mviewer>
+  </body>
+</html>

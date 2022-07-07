@@ -1,0 +1,60 @@
+
+
+{"type": "object",
+    "properties": {
+      "application": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "logo": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title"
+        ]
+      },
+      "mapoptions": {
+        "type": "object",
+        "properties": {
+          "center": {
+            "type": "array",
+            "items": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ]
+          },
+          "zoom": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "center",
+          "zoom"
+        ]
+      },
+      "components": {
+        "type": "array",
+        "items": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "required": [
+      "application",
+      "mapoptions",
+      "components"
+    ]
+  }
+
