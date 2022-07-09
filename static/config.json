@@ -8,6 +8,6 @@
     },
     "components": [
         {"id": "navbar"} ,
-        {"id": "sidebar", "components": { "id": "treelayer" }
+        {"id": "sidebar", "components": { "id": "treelayer" }}
     ]
 }
