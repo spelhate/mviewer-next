@@ -1,4 +1,4 @@
-export const MVIEWER_SELECTOR = 'mviewer#mviewer'
+export const MVIEWER_SELECTOR = 'mviewer'
 export const EVENT_TYPES = [
     'mv-map-loaded',
     'mv-component-loaded',

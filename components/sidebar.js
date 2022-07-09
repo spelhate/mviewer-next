@@ -15,11 +15,15 @@ export default class MviewerSidebar extends MviewerComponent {
 
     constructor() {
       super();
-      this.template = template;
     }
 
 
     connectedCallback() {
+        const tpl  = document.createElement('template');
+        tpl.innerHTML = template;
+        this.appendChild(tpl.content.cloneNode(true));
+        const evtType = 'mv-component-loaded';
+        this.eventBus.dispatchEvent(evtType, { component: this, type: evtType});
     }
 
 
