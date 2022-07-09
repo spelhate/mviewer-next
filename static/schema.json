@@ -43,10 +43,18 @@
         "type": "array",
         "items": [
           {
-            "type": "string"
-          },
-          {
-            "type": "string"
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "components":{
+                "type":"array"
+              }
+            },
+            "required": [
+              "id"
+            ]
           }
         ]
       }
