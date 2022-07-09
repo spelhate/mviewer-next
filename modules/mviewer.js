@@ -48,7 +48,7 @@ export default class Mviewer {
     #enableComponents() {
         const self = this;
         this.config.components.forEach(function (cp) {
-            Array.from(self.element.getElementsByTagName(`mviewer-${cp}`)).forEach(el => el.setAttribute("enabled",""));
+            Array.from(self.element.getElementsByTagName(`mviewer-${cp.id}`)).forEach(el => el.setAttribute("enabled",""));
 
         })
         const evtType = 'mv-all-components-loaded';
