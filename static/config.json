@@ -7,7 +7,7 @@
         "zoom": 9
     },
     "components": [
-        "navbar",
-        "sidebar"
+        {"id": "navbar"} ,
+        {"id": "sidebar", "components": { "id": "treelayer" }
     ]
 }
