@@ -25,21 +25,10 @@ export default class MviewerMap extends MviewerComponent {
 
 
     connectedCallback() {
-        /*const tpl  = document.createElement('template');
-        tpl.innerHTML = template;
-        this.appendChild(tpl.content.cloneNode(true));*/
-
         const link = document.createElement('link');
         link.setAttribute('rel', 'stylesheet');
         link.setAttribute('href', 'ol.css');
         this.appendChild(link);
-        /*const style = document.createElement('style');
-        style.innerText = `
-        :host {
-            display: block;
-        }
-        `;
-        this.appendChild(style);*/
         const div = document.createElement('div');
         div.style.width = '100%';
         div.style.height = '100%';
@@ -48,6 +37,7 @@ export default class MviewerMap extends MviewerComponent {
         this.appendChild(div);
         this.map =  new Map({
             target: div,
+            controls:[],
             layers: [
             new TileLayer({
                 source: new OSM()

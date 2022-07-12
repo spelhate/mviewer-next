@@ -2,14 +2,18 @@ import { mviewerEventBus }  from '../modules/event';
 
 export class MviewerComponent extends HTMLElement {
 
-    static get observedAttributes() {
-        return ['enabled'];
-	}
-
-    constructor(config) {
+    constructor() {
       super();
-      this.eventBus = mviewerEventBus;
+      this.config = undefined;
+      this.eventBus = undefined;
+    }
+
+    set configuration (config) {
       this.config = config;
+    }
+
+    set sharedEventBus (eventBus) {
+      this.eventBus = eventBus;
     }
 
   }

@@ -1,18 +1,19 @@
 import './scss/style.scss';
 import { Tooltip as Tooltip, Toast as Toast, Popover as Popover } from 'bootstrap';
-import Mviewer from './modules/mviewer.js';
+import "./modules/components";
+
 
 const config_file = 'config.json';
 //const config_file = 'default.xml';
-const mviewer = new Mviewer();
-mviewer.events.on("mv-map-loaded", function(e) {console.log(e.detail);});
-mviewer.events.on("mv-components-loaded", function(e) {console.log(e.detail);});
+const mviewer = document.querySelector("mviewer-app");
+/* At this point only shared Bus event : mviewer.events is avalaible and loader component */
+mviewer.events.on("loaded", function(e) {console.log("mviewer is loaded", e.target);});
 //notification for each component loaded
 mviewer.events.on("mv-component-loaded", function(e) {console.log(e.detail);});
-mviewer.loadConfig(config_file);
-
-//Set mviewer globally
-window.mviewer = mviewer;
+//Choose one of this initializers
+mviewer.config_file = config_file;
+/*let config = '{"application":{"title":"mviewer bt4"},"mapoptions":{"center":[-280683.49531344074,6112461.814273552],"zoom":8},"components":[{"id":"navbar"},{"id":"map"},{"id":"sidebar","components":{"id":"treelayer"}}]}';
+mviewer.config = config;*/
 
 
 

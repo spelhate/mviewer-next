@@ -10,6 +10,17 @@ mviewer {
     display: block;
 }
 
+.mv-component {
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+
+}
+
+.mv-component.mv-component-ready {
+    opacity: 1;
+
+}
+
 /*mviewer-map {
     height: 400px;
     width: 100%;

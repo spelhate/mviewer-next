@@ -33,9 +33,59 @@
 
 ### installation
 
+testé avec npm 7.5.2
+
 ```shell
 git clone https://github.com/spelhate/mviewer-next
 cd mviewer-next
 npm install
 npm start
 ```
+
+### Usage
+
+4 ways to init mviewer web component
+
+```html
+<body>
+      <mviewer-app config_file="config.json"></mviewer-app>
+      <script src="./index.js"></script>
+  </body>
+  ```
+Or
+
+```html
+<body>
+      <mviewer-app"></mviewer-app>
+      <script src="./index.js"></script>
+      <script>
+        const config_file = 'config.json';
+        const mviewer = document.querySelector("mviewer-app");
+        mviewer.events.on("loaded", function(e) {console.log("mviewer is loaded", e.target);});
+        mviewer.config_file(config_file);
+      </script>
+  </body>
+  ```
+
+Or
+
+```html
+<body>
+      <mviewer-app"></mviewer-app>
+      <script src="./index.js"></script>
+      <script>
+        const config = '{"application":{"title":"mviewer bt4"},"mapoptions":{"center":[-280683.49531344074,6112461.814273552],"zoom":8},"components":[{"id":"navbar"},{"id":"map"},{"id":"sidebar"}]}'
+        const mviewer = document.querySelector("mviewer-app");
+        mviewer.events.on("loaded", function(e) {console.log("mviewer is loaded", e.target);});
+        mviewer.config = config;
+      </script>
+  </body>
+  ```
+
+Or
+```html
+<body>
+      <mviewer-app config="{&quot;application&quot;:{&quot;title&quot;:&quot;mviewer bt4&quot;},&quot;mapoptions&quot;:{&quot;center&quot;:[-280683.49531344074,6112461.814273552],&quot;zoom&quot;:8},&quot;components&quot;:[{&quot;id&quot;:&quot;navbar&quot;},{&quot;id&quot;:&quot;map&quot;},{&quot;id&quot;:&quot;sidebar&quot;,&quot;components&quot;:{&quot;id&quot;:&quot;treelayer&quot;}}]}"></mviewer-app>
+      <script src="./index.js"></script>
+  </body>
+  ```

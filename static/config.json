@@ -4,7 +4,7 @@
     },
     "mapoptions": {
         "center": [-280683.49531344074, 6112461.814273552],
-        "zoom": 9
+        "zoom": 8
     },
     "components": [
         {"id": "navbar"} ,
