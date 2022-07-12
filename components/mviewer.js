@@ -62,6 +62,15 @@ export class MviewerApp extends HTMLElement{
     }
 
     applyConfig() {
+      if (this.#config.application.style) {
+        const style = this.#config.application.style;
+        const link = document.createElement("link");
+        link.href = style;
+        link.rel = "stylesheet";
+        this.insertBefore(link, this.firstElementChild);
+
+
+      }
       this.#enableComponents();
       this.#configIHM();
       //Dispatch event on <mviewer-app> element

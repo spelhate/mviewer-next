@@ -1,6 +1,7 @@
 {
     "application": {
-        "title": "mviewer next"
+        "title": "mviewer next",
+        "style":"custom/custom.css"
     },
     "mapoptions": {
         "center": [-280683.49531344074, 6112461.814273552],
