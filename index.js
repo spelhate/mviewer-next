@@ -3,8 +3,8 @@ import { Tooltip as Tooltip, Toast as Toast, Popover as Popover } from 'bootstra
 import "./modules/components";
 
 
-const config_file = 'config.json';
-//const config_file = 'default.xml';
+const config_file = 'apps/config.json';
+//const config_file = 'apps/default.xml';
 const mviewer = document.querySelector("mviewer-app");
 /* At this point only shared Bus event : mviewer.events is avalaible and loader component */
 mviewer.events.on("loaded", function(e) {console.log("mviewer is loaded", e.target);});

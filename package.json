@@ -4,12 +4,21 @@
   "description": "",
   "main": "index.js",
   "staticFiles": {
-    "staticPath": "static",
-    "watcherGlob": "**/*.json"
+    "staticPath": [
+      {
+        "staticPath": "static",
+        "staticOutDir": "apps",
+        "watcherGlob": "**/*.json"
+      },
+      {
+        "staticPath": "custom",
+        "staticOutDir": "custom"
+      }
+    ]
   },
   "scripts": {
-    "start": "parcel serve index.html",
-    "build": "parcel build --public-url . index.html"
+    "start": "parcel serve --out-dir dist2 index.html",
+    "build": "parcel build --out-dir dist --public-url . index.html"
   },
   "keywords": [],
   "author": "",

@@ -42,6 +42,13 @@ npm install
 npm start
 ```
 
+### build
+
+```shell
+npx parcel build
+```
+
+
 ### Usage
 
 4 ways to init mviewer web component

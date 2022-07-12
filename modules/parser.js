@@ -47,7 +47,7 @@ export class MviewerParser {
     }
 
         //try {
-            const schema_file = await fetch('./schema.json');
+            const schema_file = await fetch('./apps/schema.json');
             const schema = await schema_file.json();
             this.schema = schema;
             const response = await fetch(this.file);
