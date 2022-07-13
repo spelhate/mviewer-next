@@ -1,7 +1,7 @@
 import { MviewerComponent } from './base-component';
 
 const template = `
-<nav class="navbar navbar-dark bg-dark">
+<nav class="navbar fixed-top navbar-dark bg-dark">
 <div class="container-fluid">
     <a class="navbar-brand" href="#">mviewer next</a>
     <!-- toggler -->

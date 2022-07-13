@@ -16,10 +16,13 @@ export class MviewerApp extends HTMLElement{
       super();
       this.loader = new MviewerLoader();
       this.events = new MviewerEventBus(this);
+      this.container = document.createElement("div");
+      this.container.classList.add("mv-container");
     }
 
     connectedCallback() {
       this.appendChild(this.loader);
+      this.appendChild(this.container);
       this.dispatchEvent(new CustomEvent('loaded', { "mviewer": this }));
     }
 
@@ -92,7 +95,7 @@ export class MviewerApp extends HTMLElement{
             component.sharedEventBus = self.events;
             component.configuration = self.#config;
             component.classList.add('mv-component');
-            self.appendChild(component);
+            self.container.appendChild(component);
           } else {
             console.log(`Le composant ${cp.id} n'est pas défini`);
           }
@@ -108,7 +111,8 @@ export class MviewerApp extends HTMLElement{
 
     #ready() {
       this.loader.hidden = true;
-      this.querySelectorAll(".mv-component").forEach(cp => {cp.classList.add("mv-component-ready")});
+      this.container.classList.add("ready");
+      //this.querySelectorAll(".mv-component").forEach(cp => {cp.classList.add("mv-component-ready")});
     }
 
     #configIHM() {

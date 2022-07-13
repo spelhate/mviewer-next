@@ -10,13 +10,13 @@ mviewer {
     display: block;
 }
 
-.mv-component {
+.mv-container {
     opacity: 0;
     transition: opacity 3s ease-in-out;
 
 }
 
-.mv-component.mv-component-ready {
+.mv-container.ready {
     opacity: 1;
 
 }
