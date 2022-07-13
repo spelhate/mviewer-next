@@ -2,23 +2,23 @@
   "name": "mviewer-next",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "staticFiles": {
     "staticPath": [
       {
-        "staticPath": "static",
+        "staticPath": "src/static",
         "staticOutDir": "apps",
         "watcherGlob": "**/*.json"
       },
       {
-        "staticPath": "custom",
+        "staticPath": "src/custom",
         "staticOutDir": "custom"
       }
     ]
   },
   "scripts": {
-    "start": "parcel serve --out-dir dist2 index.html",
-    "build": "parcel build --out-dir dist --public-url . index.html"
+    "start": "parcel serve --out-dir dist src/index.html",
+    "build": "parcel build --out-dir www --public-url . src/index.html"
   },
   "keywords": [],
   "author": "",
